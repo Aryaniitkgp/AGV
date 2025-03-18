@@ -3,12 +3,12 @@ import numpy as np
 
 cap = cv2.VideoCapture(r"C:\Users\aryan\Downloads\AGV TASK\LK.mp4")
 
-# Get video properties
+
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))
 
-#
+
 output_path = "tracked_output.mp4"
 fourcc = cv2.VideoWriter_fourcc(*'avc1')  
 out = cv2.VideoWriter(output_path, fourcc, fps, (frame_width, frame_height))
